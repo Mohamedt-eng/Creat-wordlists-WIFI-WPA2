@@ -19,9 +19,9 @@ _____ _           _                        _
 password list targeting specific victims"   \u001b[37m 
 \u001b[37m"""
 print (name)
-listsymbol1 = ['&','!','*','|','?','/',' ','#','/','@','%','~','.','$','=','(',')','|',']','[','$','_','-','¦','{','}']
-listsymbol3 = ['§','#','*','|','¿','~','£','€','/','%','!','.','+','=','(',')','[',']','&','$','_',' ','-','?','{','}','@']
-listsymbol2 = ['.''{','}','-','+','[','=','&','%','*',']','^','_','(','/',')','$','@','?','!','~','#','|',' ','>','<']
+listsymbol1 = ['@','}','?','$','.','/',' ','#','@','%','~','.','=','(',')','|',']','[','$','_','-','¦','{','}']
+listsymbol3 = ['$','{','*','#','?','~',']',' ','/','%','!','.','+','=','(',')','[',']','&','_',' ','-','?','{','}','@']
+listsymbol2 = ['/''{','#','!','-','+','[','=',' ','%','*',']','^','_','(','/',')','$','@','?','!','~','|','&','>','<']
 
 
 encrement_number = 0
@@ -34,48 +34,55 @@ print (u"\u001b[36m wihting.....\u001b[37m")
 
 for i in wordlist.readlines(): #for loop encrement words as file
      i = i.rstrip("\n")
+     paswds.write(i)
      #encement_symbol +=1
      for x in listsymbol1:
           #encrement_number +=1
           for y in listsymbol2 : #for loop encrement character as array
                for g in listsymbol3:
                    encrement_number = encrement_number +1
-                   # i = i.rstrip("\n")
-                   paswds.write(i+y+x+str(encrement_number)+x+y+"\n")
-                   paswds.write(i+str(encrement_number)+x+"\n")
-                   paswds.write(str(encrement_number)+x+i+"\n")
-                   paswds.write(x+str(encrement_number)+i+x+"\n")
-                   paswds.write(x*2+i+x*2+"\n")
-                   paswds.write(i+str(encrement_number)+i+str(encrement_number)+"\n")
-                   paswds.write(str(encrement_number)+i+str(encrement_number)+"\n")
-                   paswds.write(i+str(encrement_number)*2+"\n")
-                   paswds.write(i+str(encrement_number)*3+"\n")
-                   paswds.write(str(encrement_number)*4+i+"\n")
-                   paswds.write(i+str(encrement_number)+i+"\n")
+                   paswds.write(i+str(encrement_number)+"\n")
+                   paswds.write(i+str(encrement_number)+str(encrement_number)+"\n")
                    paswds.write(str(encrement_number)+i+"\n")
-                   paswds.write(str(encrement_number)*2+i+"\n")
-                   paswds.write(str(encrement_number)*3+i+"\n")
-                   paswds.write(i+str(encrement_number)+i+str(encrement_number)+"\n")
-                   paswds.write(i+str(encrement_number)+i+str(encrement_number)+x+y+"\n")
-                   #symbol
-                   paswds.write(i+x*3+str(encrement_number)+"\n")
-                   paswds.write(i+x*3+str(encrement_number)+x+"\n")
-                   paswds.write(x*4+i+str(encrement_number)+x+"\n")
-                   paswds.write(x*4+i+str(encrement_number)+x*4+"\n")
-                   paswds.write(x+str(encrement_number)+i+y+x+"\n")
-                   paswds.write(str(encrement_number)*2+i+x+y+x+"\n")
-                   paswds.write(y+str(encrement_number)*2+i+y+x+"\n")
-                   paswds.write(y+g+x+y+i+str(encrement_number)+"\n")
-                   paswds.write(i+str(encrement_number)+y+g+x+y+"\n")
-                   paswds.write(y+g+x+y+i+str(encrement_number)+y+g+x+y+"\n")
-                   paswds.write(i+str(encrement_number)+i+str(encrement_number)+y+x+"\n")
+                   paswds.write(i+str(encrement_number)+i+"\n")
+                   paswds.write(str(encrement_number)+x+y+"\n")
+                   paswds.write(i+str(encrement_number)*2+"\n")
+                   paswds.write(i+y+x+g+"\n")
+                   paswds.write(x*2+i+x*2+"\n")
+                   paswds.write(str(encrement_number)+i+str(encrement_number)+"\n")
+                   paswds.write(i+g+x+y+"\n")
+                   paswds.write(i+g*4+x*4+"\n")
+                   paswds.write(i+y*4+x*2+"\n")
+                   paswds.write(g*2+x*2+y*2+i+"\n")
+                   paswds.write(i+x*2+y*2+"\n")
+                   paswds.write(str(encrement_number)*2+i+x+y+g+"\n")
+                   paswds.write(x*4+i+str(encrement_number)+"\n")
+                   paswds.write(i+str(encrement_number)+x*4+"\n")
+                   if i == i.lower():
+                       i = i.upper() #change lower str to upper str
+                       paswds.write(i+str(encrement_number)+"\n")
+                       paswds.write(str(encrement_number)+i+"\n")
+                       paswds.write(i+str(encrement_number)+i+"\n")
+                       paswds.write(str(encrement_number)+x+y+"\n")
+                       paswds.write(i+str(encrement_number)*2+"\n")
+                       paswds.write(i+y+x+g+"\n")
+                       paswds.write(x*2+i+x*2+"\n")
+                       paswds.write(str(encrement_number)+i+str(encrement_number)+"\n")
+                       paswds.write(i+g+x+y+"\n")
+                       paswds.write(i+g*4+x*4+"\n")
+                       paswds.write(i+y*4+x*2+"\n")
+                       paswds.write(g*2+x*2+y*2+i+"\n")
+                       paswds.write(i+x*2+y*2+"\n")
+                       paswds.write(str(encrement_number)*2+i+x+y+g+"\n")
+                       paswds.write(x*4+i+str(encrement_number)+"\n")
+                       paswds.write(i+str(encrement_number)+x*4+"\n")
+                   i = i.lower() or upper()#change upper str to lower str
           if encrement_number >= 9999:
-                        #encement_symbol=0
-                        #print (u"\u001b[31m List Completed u\u001b[36m")
-
-                        break
+                  break
+     
      encrement_number=0
-print (u"\u001b[31m List Completed u\u001b[36m")      
+print (u"\u001b[32m List Completed /Passwords.txt \u001b[37m")         
+paswds.close()    
            
                         
       
